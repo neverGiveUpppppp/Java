@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Array_review2 {
 	public static void main(String[] args) {
@@ -268,21 +269,80 @@ public class Array_review2 {
 		// 배열 길이만큼 복사해오기에 System.arraycopy()처럼 공간이 남지않는다
 		// 원본 길이보다 길게 복사할 경우, 남는 공간은 원본의 데이터타입 기본값으로 채운다
 		
+		int[] aSrcArr = {1,2,3};
+		int[] aCopyArr = new int[5];
+		aCopyArr = Arrays.copyOf(aSrcArr, 6);
+		
+		for(int i=0; i<aSrcArr.length; i++) {
+			System.out.print(aSrcArr[i]+" ");  // 1 2 3 
+		}
+		System.out.println();
+		for(int i=0; i<aCopyArr.length; i++) { // 자동 길이추가
+			System.out.print(aCopyArr[i]+" "); // 1 2 3 0 0 0 
+		}									   // 남은 공간에 int 기본값 0
+		System.out.println();
+		
+		
 		// int타입
 		// 여분 : 0
+		int[] aSrcArr2 = {1,2,3};
+		int[] aCopyArr2 = new int[5];
+		aCopyArr2 = Arrays.copyOf(aSrcArr2, 7);
 		
+		for(int i=0; i<aSrcArr2.length; i++) {
+			System.out.print(aSrcArr2[i]+" ");  // 1 2 3 
+		}
+		System.out.println();
+		for(int i=0; i<aCopyArr2.length; i++) { // 자동 길이추가
+			System.out.print(aCopyArr2[i]+" "); // 1 2 3 0 0 0 0 
+		}									   // 남은 공간에 int 기본값 0
+		System.out.println();
 		
 		// double타입
 		// 여분 : 0.0d
+		double[] dSrcArr2 = {1.1,2.2,3.3};
+		double[] dCopyArr2 = new double[5];
+		dCopyArr2 = Arrays.copyOf(dSrcArr2, 7);
 		
+		for(int i=0; i<dSrcArr2.length; i++) {
+			System.out.print(dSrcArr2[i]+" ");  // 1.1 2.2 3.3
+		}
+		System.out.println();
+		for(int i=0; i<dCopyArr2.length; i++) { // 자동 길이추가
+			System.out.print(dCopyArr2[i]+" "); // 1.1 2.2 3.3 0.0 0.0 0.0 0.0   
+		}									   // 남은 공간에 int 기본값 0
+		System.out.println();
 		
 		// char타입
 		// 여분 : (공백)
+		char[] cSrcArr2 = {'A','B','C'};
+		char[] cCopyArr2 = new char[5];
+		cCopyArr2 = Arrays.copyOf(cSrcArr2, 6);
+		
+		for(int i=0; i<cSrcArr2.length; i++) {
+			System.out.print(cSrcArr2[i]+" ");  // A B C 
+		}
+		System.out.println();
+		for(int i=0; i<cCopyArr2.length; i++) { // 자동 길이추가
+			System.out.print(cCopyArr2[i]+" "); // A B C          (공백)
+		}									   // 남은 공간에 int 기본값 0
+		System.out.println();
 		
 		
 		// String
 		// 여분 : null
+		String[] sSrcArr2 = {"사레레","케푸다","라트익"};
+		String[] sCopyArr2 = new String[6];
+		sCopyArr2 = Arrays.copyOf(sSrcArr2, 6);
 		
+		for(int i=0; i<sSrcArr2.length; i++) {
+			System.out.print(sSrcArr2[i]+" ");  // A B C 
+		}
+		System.out.println();
+		for(int i=0; i<sCopyArr2.length; i++) { // 자동 길이추가
+			System.out.print(sCopyArr2[i]+" "); // 사레레 케푸다 라트익 
+		}									   // 사레레 케푸다 라트익 null null null 
+		System.out.println();
 		
 		
 	}
