@@ -128,8 +128,8 @@ public class Array_review {
 		//2)깊은 복사
 		// 새로운 배열을 만들어 기존 데이터를 모두 복사해오는 것
 		// 방법1:for문
-		// 방법2:System.array.copy()
-		// 방법3:Arrays.copyof()
+		// 방법2:System.arraycopy()
+		// 방법3:Arrays.copyOf()
 		
 		// 방법1:for문
 		int[] sourceArr = {10,20,30};
