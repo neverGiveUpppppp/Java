@@ -174,7 +174,7 @@ public class Array_review {
 		// 얕은 복사로 원본과 카피가 값이 같아졌지만 주소값은 여전히 다름
 		
 		
-		// 방법2:System.array.copy()
+		// 방법2:System.arraycopy()
 		// 배열길이 자동 수정x
 		// 복사된 값의 나머지 공간은 해당 배열의 데이터 타입의 기본값으로 채워진다
 		// ex)
