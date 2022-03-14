@@ -24,6 +24,9 @@ public class Array_review {
 		arr1[1] = 2;
 		arr1[2] = 3;
 		
+		arr[0] = 1; // error
+					// 배열길이 지정하지 않았는데 인덱스번호 지정하고 값 넣을려니 에러
+		
 		System.out.println(arr1[0]); // 1
 		System.out.println(arr1[1]); // 2
 		System.out.println(arr1[2]); // 3
@@ -32,6 +35,8 @@ public class Array_review {
 		// 2)중괄호 {}
 		int[] arr3 = {1,2,3};
 //		int arr3[] = {1,2,3}; // error
+//		arr3 = {1,2,3}; // error 
+		//Array constants can only be used in initializers
 		for(int i=0; i<arr3.length; i++) {
 			System.out.print(arr3[i]+ " "); // 1 2 3
 		}
@@ -39,6 +44,14 @@ public class Array_review {
 		
 		// 3)for문
 		// 초기화할 값에 ‘규칙’이 존재할 경우 사용가능
+		// for문 인덱스 이용한거라 int만 가능
+		char[] Arr = new char[3]; // for문 인덱스 이용한거라 int만 가능
+		int[] Arr2 = new int[3];
+		for(int i=0; i<Arr2.length; i++) {
+			System.out.print(Arr2[i]+" "); // 0 0 0
+		} // 배열값을 안 넣어놔서 int의 기본값인 0 출력됨
+		
+		
 		int[] arr4 = new int[3];
 		for(int i=0; i<arr4.length; i++) {
 			arr4[i] = i+3;
